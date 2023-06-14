@@ -13,7 +13,7 @@ class DictionaryBackendServer {
 
     const app = express();
     app.use(express.json());
-    app.use(express.static('public'));
+    app.use(express.static('front'));
     app.use(express.urlencoded({ extended: false }));
     const authorization = new Authorization(app);
 
@@ -42,11 +42,11 @@ class DictionaryBackendServer {
   }
 
   async _login(req, res) {
-    res.sendFile(path.join(__dirname, "public/login.html"));
+    res.sendFile(path.join(__dirname, "front/login.html"));
   }
 
   async _goHome(req, res) {
-    res.sendFile(path.join(__dirname, "public/home.html"));
+    res.sendFile(path.join(__dirname, "front/home.html"));
   }
 
   async _doLookup(req, res) {
