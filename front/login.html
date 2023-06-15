@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Login Page</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
 
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-  
-</head>
+<header>
+  <h1>Plataforma de Ecommerce</h1>
+  <nav>
+    <ul>
+      <li><a href="home.html">Productos nuevos</a></li>
+      <li><a href="series.html">Todos los productos</a></li>
+      <li><a href="login.html">Perfil</a></li>
+    </ul>
+  </nav>
+</header>
+
 <body>
-  <h1>Login</h1>
+  <div id="containerCuenta">
+    <h1>¡Iniciar sesión!</h1>
+    <form class="formulario">
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" class="input" name="correo" required>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" class="input" name="contrasena" required>
+        <button type="submit" class="boton">Iniciar sesión</button>
+        <h3>Or login with google:</h3>
+          <div class="row">
+            <div class="col-md-3">
+              <a id="google-login" class="btn btn-outline-dark" href="/auth/google" role="button" style="text-transform:none">
+                <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                Login with Google
+              </a>
+            </div>
+          </div>
+          <p id="cuenta">¿No tienes cuenta? <a href="registro.html" class="hyperlink">Crear cuenta</a></p>
+    </div>
+    </form>
     
-<div class="row">
-  <div class="col-md-3">
-    <a id="google-login" class="btn btn-outline-dark" href="/auth/google" role="button" style="text-transform:none">
-      <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-      Login with Google
-    </a>
-  </div>
-</div>
+
+
+
+  
 
 <!-- Minimized CSS and JS -->
 <link   rel="stylesheet" 
