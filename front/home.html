@@ -7,78 +7,51 @@
   </head>
   <body>
     <header>
-      <h1>Plataforma de Streaming</h1>
+      <h1>Plataforma de Ecommerce</h1>
       <nav>
         <ul>
-          <li><a href="home.html">Películas</a></li>
-          <li><a href="series.html">Series</a></li>
+          <li><a href="home.html">Productos nuevos</a></li>
+          <li><a href="series.html">Todos los productos</a></li>
           <li><a href="login.html">Perfil</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="featured">
-        <h2>Últimas Películas</h2>
-        <div>
-          <button>Latest asc</button>
-          <button>Lates desc</button>
-          <button>Most pop asc</button>
-          <button>Most pop desc</button>
+        <h2>Últimas productos</h2>
+        
+        <div class="formulario">
+          <form id="productForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+      
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required>
+      
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+      
+            <label for="image">Image URL:</label>
+            <input type="url" id="image" name="image" required>
+      
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+      
+            <button type="submit">Add Product</button>
+          </form>
+        </div>
+
+        <div class="contBotones">
           <button class="boton">Latest asc</button>
           <button class="boton">Lates desc</button>
           <button class="boton">Most pop asc</button>
           <button class="boton">Most pop desc</button>
         </div>
-        <article>
-          <h3>Título de la Película</h3>
-          <img src="https://via.placeholder.com/300x450" alt="Título de la Película o Serie">
-          <p>Descripción de la Película</p>
-          <a href="#">Ver más</a>
-          <a href="#" class="hyperlink">Ver más</a>
-        </article>
 
-        <article>
-          <h3>Título de la Película</h3>
-          <img src="https://via.placeholder.com/300x450" alt="Título de la Película o Serie">
-          <p>Descripción de la Película</p>
-          <a href="#">Ver más</a>
-          <a href="#" class="hyperlink">Ver más</a>
-        </article>
-
-        <article>
-          <h3>Título de la Película</h3>
-          <img src="https://via.placeholder.com/300x450" alt="Título de la Película o Serie">
-          <p>Descripción de la Película</p>
-          <a href="#">Ver más</a>
-          <a href="#" class="hyperlink">Ver más</a>
-        </article>
-
-        <article>
-          <h3>Título de la Película</h3>
-          <img src="https://via.placeholder.com/300x450" alt="Título de la Película o Serie">
-          <p>Descripción de la Película</p>
-          <a href="#">Ver más</a>
-          <a href="#" class="hyperlink">Ver más</a>
-        </article>
-
-        <article>
-          <h3>Título de la Película</h3>
-          <img src="https://via.placeholder.com/300x450" alt="Título de la Película o Serie">
-          <p>Descripción de la Película</p>
-          <a href="#">Ver más</a>
-          <a href="#" class="hyperlink">Ver más</a>
-        </article>
-
-        <article>
-          <h3>Título de la Película</h3>
-          <img src="https://via.placeholder.com/300x450" alt="Título de la Película o Serie">
-          <p>Descripción de la Película</p>
-          <a href="#">Ver más</a>
-          <a href="#" class="hyperlink">Ver más</a>
-        </article>
-        <!-- Repetir este bloque de código para cada película o serie destacada -->
-      </section>
-
+        <div class="contenedor" id="contenedor"></div>
+        
+      </main>
+    </body>
+      
       <script src="script.js"></script>
       <script src="auth.js"></script>
       <script src="db.js"></script>
