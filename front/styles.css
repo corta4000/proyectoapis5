@@ -1,3 +1,11 @@
+.tarjeta {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -52,6 +60,7 @@ body {
   #containerCuenta h1 {
     text-align: center;
     margin-top: 0;
+    display: block;
   }
   
   .formulario {
@@ -89,4 +98,96 @@ body {
   .hyperlink:hover {
     text-decoration: underline;
   }
-  
+
+/*FORMATO A LAS TARJETAS DE LOS PRODUCTOS*/
+
+.contBotones {
+  text-align: center;
+  margin: 10px;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta .titulo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tarjeta .cuerpo {
+  margin-bottom: 10px;
+}
+
+.tarjeta .cuerpo img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.tarjeta .pie {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .tarjeta {
+    width: 100%;
+  }
+}
+
+/*ESTILO DEL FORMULARIO*/
+
+.formulario {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formulario label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario textarea,
+.formulario input[type="url"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formulario button[type="submit"] {
+  text-align: center;
+  display: block;
+  width: 100px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario button[type="submit"]:hover {
+  background-color: #0062cc;
+}
