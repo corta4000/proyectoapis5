@@ -70,6 +70,15 @@ class DictionaryBackendServer {
     await collection.updateOne(query, update, params);
     res.json({ success: true });
   }
+
+  async _doSave(req, res) {
+    const data = req.body;
+  
+    const collection = db.collection("ecomerce");
+    await collection.insertOne(data);
+  
+    res.json({ success: true });
+  }
 }
 
 new DictionaryBackendServer();
