@@ -58,7 +58,7 @@ class Registrate {
             body: JSON.stringify(postBody)
         };
         
-        return fetch('registro', fetchOptions);
+        return fetch('/registro', fetchOptions);
 
     }
 
