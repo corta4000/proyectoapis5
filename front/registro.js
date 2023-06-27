@@ -29,15 +29,15 @@ class Registrate {
         //Instancio los input para luego obtener sus valores
         const inputName = document.querySelector('#name');
         console.log('name' + inputName.value)
-        const inputEmail = document.querySelector('#mail');
-        console.log('mail' + inputEmail.value)
+        const inputMail = document.querySelector('#mail');
+        console.log('mail' + inputMail.value)
         const inputPassword = document.querySelector('#password');
         console.log('password' + inputPassword.value)
 
 
-        this.singup({
-            nombre : inputName.value,
-            email : inputEmail.value,
+        this.signup({
+            name : inputName.value,
+            mail : inputMail.value,
             password : inputPassword.value
         })
         .then(result => {
@@ -48,7 +48,7 @@ class Registrate {
     }
 
     //Metodo para hacer el fetch al server.
-    singup(postBody) {
+    signup(postBody) {
         const fetchOptions = {
             method: 'POST',
             headers: {
