@@ -5,6 +5,7 @@ import path from 'path';
 import fs from 'fs';
 import Authorization from "./auth.js"
 
+
 const __dirname = fs.realpathSync('.');
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -32,11 +33,29 @@ class DictionaryBackendServer {
       failureRedirect: '/login'
     }));
 
+    app.post('/registro', (req,res) => {
+      const { name, mail, password } = req.body;
+      const nuevoUsuario = new Usuario({
+        name,
+        mail,
+        password,
+      });
+      nuevoUsuario.save()
+    .then(() => {
+      // Envía una respuesta al cliente
+      res.send('Registro exitoso');
+    })
+      
+    });
      app.post("/logout", (req,res) => {
       req.logOut(err=>console.log(err));
       res.redirect("/login");
+      
    })
    
+   
+
+
     // Start server
     app.listen(3000, () => console.log('Listening on port 3000'));
   }
