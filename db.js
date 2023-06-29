@@ -11,6 +11,6 @@ try {
     console.error(e);
 }
 
-let db = conn.db("cluster0");
+let db = conn.db("ecomerce");
 
 export default db;
