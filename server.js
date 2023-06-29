@@ -4,7 +4,7 @@ import db from './db.js';
 import path from 'path';
 import fs from 'fs';
 import Authorization from "./auth.js"
-import Usuario from './usuario.js';
+
 
 const __dirname = fs.realpathSync('.');
 
@@ -33,27 +33,19 @@ class DictionaryBackendServer {
       failureRedirect: '/login'
     }));
 
-    app.post('/registro', (req,res) => {
-      const { name, mail, password } = req.body;
-      const nuevoUsuario = new Usuario({
-        name,
-        mail,
-        password,
-      });
-      nuevoUsuario.save()
-    .then(() => {
-      // Envía una respuesta al cliente
-      res.send('Registro exitoso');
-    })
+    app.post('/registro', _doSave);
+      async function _doSave(req,res) {
+        const data = req.body;
+    
+        const collection = db.collection("ecomerce")
+        await collection.insertOne(data);
+    
+        res.json({success: true});
+       }
       
-    });
-     app.post("/logout", (req,res) => {
-      req.logOut(err=>console.log(err));
-      res.redirect("/login");
-      
-   })
-   
-   
+    ;
+
+ 
 
 
     // Start server
